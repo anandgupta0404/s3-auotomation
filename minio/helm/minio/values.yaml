@@ -360,7 +360,7 @@ makePolicyJob:
     runAsGroup: 1000
   resources:
     requests:
-      memory: 128Mi
+      memory: 64Mi
   # Command to run after the main command on exit
   exitCommand: ""
 
