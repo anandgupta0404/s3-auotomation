@@ -294,7 +294,7 @@ podLabels: {}
 ##
 resources:
   requests:
-    memory: 16Gi
+    memory: 128Mi
 
 ## List of policies to be created after minio install
 ##
@@ -360,7 +360,7 @@ makePolicyJob:
     runAsGroup: 1000
   resources:
     requests:
-      memory: 64Mi
+      memory: 128Mi
   # Command to run after the main command on exit
   exitCommand: ""
 
