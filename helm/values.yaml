@@ -122,6 +122,7 @@ resources:
 aws:
   # If specified, use the AWS region for AWS API calls
   region: "us-east-1"
+  account_id: "000000000000"
   endpoint_url: "minio.minio.svc.cluster.local:9000"
   credentials:
     # If specified, Secret with shared credentials file to use.
