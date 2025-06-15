@@ -94,7 +94,7 @@ aws:
     # If specified, Secret with shared credentials file to use.
     secretName: "ack-secret"
     # Secret stringData key that contains the credentials
-    secretKey: "aws_access_key_id"
+    secretKey: "ack-secret"
     # Profile used for AWS credentials
     profile: "default"
 
