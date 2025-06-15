@@ -77,7 +77,7 @@ deployment:
   - name: AWS_REGION
     value: us-east-1
   - name: AWS_ENDPOINT_URL
-    value: http://minio.default.svc.cluster.local:9000
+    value: http://minio.minio.svc.cluster.local:9000
   - name: AWS_S3_USE_PATH_STYLE
     value: "true"
   - name: AWS_DISABLE_SSL
@@ -222,7 +222,7 @@ controller:
     - name: AWS_REGION
       value: us-east-1
     - name: AWS_ENDPOINT_URL
-      value: http://minio.default.svc.cluster.local:9000
+      value: http://minio.minio.svc.cluster.local:9000
     - name: AWS_S3_USE_PATH_STYLE
       value: "true"
     - name: AWS_DISABLE_SSL
