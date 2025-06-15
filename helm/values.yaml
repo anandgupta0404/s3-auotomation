@@ -92,6 +92,8 @@ deployment:
     value: "true"
   - name: AWS_DISABLE_SSL
     value: "true"
+  - name: ACK_LOG_LEVEL
+    value: debug
 
 
 
