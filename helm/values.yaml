@@ -64,36 +64,36 @@ deployment:
   #       key: username
   extraEnvVars: 
 
-  - name: AWS_ACCESS_KEY_ID
-    valueFrom:
-      secretKeyRef:
-        name: ack-secret
-        key: aws_access_key_id
-  - name: AWS_SECRET_ACCESS_KEY
-    valueFrom:
-      secretKeyRef:
-        name: ack-secret
-        key: aws_secret_access_key
-  - name: AWS_REGION
-    value: us-east-1
-  - name: AWS_ENDPOINT_URL
-    value: http://minio.minio.svc.cluster.local:9000
-  - name: AWS_S3_USE_PATH_STYLE
-    value: "true"
-  - name: AWS_DISABLE_SSL
-    value: "true"
-  - name: ACK_ENABLE_DEVELOPMENT_LOGGING
-    value: "true"
-  - name: ACK_LOG_LEVEL
-    value: debug
-  - name: ACK_DISABLE_AWS_ACCOUNT_IDENTITY
-    value: "true"  # ← This disables AWS identity call
-  - name: ACK_ENABLE_UNSAFE_ENDPOINTS
-    value: "true"
-  - name: AWS_DISABLE_SSL
-    value: "true"
-  - name: ACK_LOG_LEVEL
-    value: debug
+    - name: AWS_ACCESS_KEY_ID
+      valueFrom:
+        secretKeyRef:
+          name: ack-secret
+          key: aws_access_key_id
+    - name: AWS_SECRET_ACCESS_KEY
+      valueFrom:
+        secretKeyRef:
+          name: ack-secret
+          key: aws_secret_access_key
+    - name: AWS_REGION
+      value: us-east-1
+    - name: AWS_ENDPOINT_URL
+      value: http://minio.minio.svc.cluster.local:9000
+    - name: AWS_S3_USE_PATH_STYLE
+      value: "true"
+    - name: AWS_DISABLE_SSL
+      value: "true"
+    - name: ACK_ENABLE_DEVELOPMENT_LOGGING
+      value: "true"
+    - name: ACK_LOG_LEVEL
+      value: debug
+    - name: ACK_DISABLE_AWS_ACCOUNT_IDENTITY
+      value: "true"  # ← This disables AWS identity call
+    - name: ACK_ENABLE_UNSAFE_ENDPOINTS
+      value: "true"
+    - name: AWS_DISABLE_SSL
+      value: "true"
+    - name: ACK_LOG_LEVEL
+      value: debug
 
 
 
@@ -213,25 +213,3 @@ featureGates:
   ReadOnlyResources: false
   # Enable ResourceAdoption feature/annotation. 
   ResourceAdoption: false
-controller:
-  env:
-    - name: AWS_ACCESS_KEY_ID
-      value: minioadmin
-    - name: AWS_SECRET_ACCESS_KEY
-      value: minioadmin
-    - name: AWS_REGION
-      value: us-east-1
-    - name: AWS_ENDPOINT_URL
-      value: http://minio.minio.svc.cluster.local:9000
-    - name: AWS_S3_USE_PATH_STYLE
-      value: "true"
-    - name: AWS_DISABLE_SSL
-      value: "true"
-    - name: ACK_DISABLE_AWS_ACCOUNT_IDENTITY
-      value: "true"
-    - name: ACK_ENABLE_UNSAFE_ENDPOINTS
-      value: "true"
-    - name: ACK_ENABLE_DEVELOPMENT_LOGGING
-      value: "true"
-    - name: ACK_LOG_LEVEL
-      value: debug
