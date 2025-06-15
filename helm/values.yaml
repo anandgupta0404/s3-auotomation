@@ -90,6 +90,8 @@ deployment:
     value: "true"  # ← This disables AWS identity call
   - name: ACK_ENABLE_UNSAFE_ENDPOINTS
     value: "true"
+  - name: AWS_DISABLE_SSL
+    value: "true"
 
 
 
