@@ -87,7 +87,10 @@ deployment:
   - name: ACK_LOG_LEVEL
     value: debug
   - name: ACK_DISABLE_AWS_ACCOUNT_IDENTITY
-    value: "true"   # ← This disables AWS identity call
+    value: "true"  # ← This disables AWS identity call
+  - name: ACK_ENABLE_UNSAFE_ENDPOINTS
+    value: "true"
+
 
 
 
